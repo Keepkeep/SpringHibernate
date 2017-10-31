@@ -1,3 +1,4 @@
+
 package demo.bean;
 
 import java.util.Date;
@@ -30,22 +31,22 @@ public class Orders {
 	private Integer orderId;
 	private String  orderNo;	//订单编号
 	private String  sendName; //送货人名字
-	private String  sendAdress;//送货地址
-	private String  sendZip;  //送货的邮编
 	private String  sendTel; //送货人电话
 	private String  payment; //支付方式
-	private String  meno;
-	private Integer tag;
 	@DateTimeFormat(pattern="yyyy-MM-dd")
 	@JsonFormat(pattern="yyyy-MM-dd",locale="GTM+8")
 	private Date ordtime;
-	private Integer userId;
+	private Integer postId;
 	@ManyToOne
-	@JoinColumn(name="userId",insertable=false,updatable=false)
-	private Users userbean;
+	@JoinColumn(name="postId",insertable=false,updatable=false)
+	private Post postbean;
 	public Integer getOrderId() {
 		return orderId;
 	}
+	private Integer proId;
+	@ManyToOne
+	@JoinColumn(name="proId",updatable=false,insertable=false)
+	private Product productbean;
 	public void setOrderId(Integer orderId) {
 		this.orderId = orderId;
 	}
@@ -61,18 +62,6 @@ public class Orders {
 	public void setSendName(String sendName) {
 		this.sendName = sendName;
 	}
-	public String getSendAdress() {
-		return sendAdress;
-	}
-	public void setSendAdress(String sendAdress) {
-		this.sendAdress = sendAdress;
-	}
-	public String getSendZip() {
-		return sendZip;
-	}
-	public void setSendZip(String sendZip) {
-		this.sendZip = sendZip;
-	}
 	public String getSendTel() {
 		return sendTel;
 	}
@@ -85,41 +74,42 @@ public class Orders {
 	public void setPayment(String payment) {
 		this.payment = payment;
 	}
-	public String getMeno() {
-		return meno;
-	}
-	public void setMeno(String meno) {
-		this.meno = meno;
-	}
-	public Integer getTag() {
-		return tag;
-	}
-	public void setTag(Integer tag) {
-		this.tag = tag;
-	}
+	
 	public Date getOrdtime() {
 		return ordtime;
 	}
 	public void setOrdtime(Date ordtime) {
 		this.ordtime = ordtime;
 	}
-	public Integer getUserId() {
-		return userId;
+	public Integer getPostId() {
+		return postId;
 	}
-	public void setUserId(Integer userId) {
-		this.userId = userId;
+	public void setPostId(Integer postId) {
+		this.postId = postId;
 	}
-	public Users getUserbean() {
-		return userbean;
+	public Post getPostbean() {
+		return postbean;
 	}
-	public void setUserbean(Users userbean) {
-		this.userbean = userbean;
+	public void setPostbean(Post postbean) {
+		this.postbean = postbean;
+	}
+	
+	public Integer getProId() {
+		return proId;
+	}
+	public void setProId(Integer proId) {
+		this.proId = proId;
+	}
+	public Product getProductbean() {
+		return productbean;
+	}
+	public void setProductbean(Product productbean) {
+		this.productbean = productbean;
 	}
 	@Override
 	public String toString() {
-		return "Orders [orderId=" + orderId + ", orderNo=" + orderNo + ", sendName=" + sendName + ", sendAdress="
-				+ sendAdress + ", sendZip=" + sendZip + ", sendTel=" + sendTel + ", payment=" + payment + ", meno="
-				+ meno + ", tag=" + tag + ", ordtime=" + ordtime + ", userId=" + userId + "]";
+		return "Orders [orderId=" + orderId + ", orderNo=" + orderNo + ", sendName=" + sendName + ", sendTel=" + sendTel
+				+ ", payment=" + payment + ", ordtime=" + ordtime + ", postId=" + postId + ", proId=" + proId + "]";
 	}
 	
 }

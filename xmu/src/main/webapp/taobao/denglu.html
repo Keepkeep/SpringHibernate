@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>京东-欢迎登录</title>
+    <link type="text/css" rel="stylesheet" href="css/a.css" source="widget">
+    <link type="text/css" rel="stylesheet" href="css/tinyscrollbar-170524.css">
+  	<script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+	<script type="text/javascript" src="js/dfrom.js"></script>
+		</head>
+<body>
+<!-- SDK 登录 -->
+<div class="w">
+    <div id="logo">
+        <a href="#" clstag="pageclick|keycount|20150112ABD|45">
+            <img src="images/logo-201305-b.png" alt="京东" width="170" height="60">
+        </a>
+        <b></b>
+    </div>
+			<a href="javascript:void(0)" target="_blank" class="q-link"><b></b>登录页面，调查问卷</a>
+    </div>
+<div id="content">
+    <div class="login-wrap">
+		<div class="w">
+            <div class="login-form">
+                <div class="login-tab login-tab-l">
+                    <a href="javascript:void(0)" clstag="pageclick|keycount|201607144|1" class=""> 扫码登录</a>
+                </div>
+                <div class="login-tab login-tab-r">
+                    <a href="javascript:void(0)" clstag="pageclick|keycount|201607144|2" style="outline: 0px none rgb(109, 109, 109);" class="checked">账户登录</a>
+                </div>
+                <div class="login-box" style="display: block; visibility: visible;">
+                    <div class="mt tab-h">
+                    </div>
+                    <div class="msg-wrap">
+						                        <div class="msg-error hide"><b></b></div>
+                    </div>
+                    <div class="mc">
+                        <div class="form">
+                            <form id="formlogin" action="/xmu/users/login.sw" method="post">
+                                <div class="item item-fore1">
+                                    <label for="loginname" class="login-label name-label"></label>
+                                    <input id="loginname" class="itxt" name="userName" tabindex="1" autocomplete="off" placeholder="邮箱/用户名/已验证手机" type="text">
+                                    <span class="clear-btn"></span>
+                                </div>
+								
+								<div id="entry" class="item item-fore2" style="visibility: visible;">
+									<label class="login-label pwd-label" for="nloginpwd"></label>
+									<input id="nloginpwd" name="userPwd"  class="itxt itxt-error" tabindex="2" autocomplete="off" placeholder="密码" type="password">
+									<span class="clear-btn"></span>
+									<span class="capslock" style="display: none;"><b></b>大小写锁定已打开</span>
+								</div>
+								
+								
+								
+<!--                                <div id="o-authcode" class="item item-vcode item-fore3  hide ">
+                                    <input id="authcode" class="itxt itxt02" name="authcode" tabindex="3" style="ime-mode: disabled;" type="text">
+                                    <img id="JD_Verification1" class="verify-code" src2="//authcode.jd.com/verify/image?a=1&amp;acid=d68c7ebc-da06-4049-ba06-d6860823c1b5&amp;uid=d68c7ebc-da06-4049-ba06-d6860823c1b5" onclick="this.src= document.location.protocol +'//authcode.jd.com/verify/image?a=1&amp;acid=d68c7ebc-da06-4049-ba06-d6860823c1b5&amp;uid=d68c7ebc-da06-4049-ba06-d6860823c1b5&amp;yys='+new Date().getTime();$('#authcode').val('');">
+                                    <a href="javascript:void(0)" onclick="$('#JD_Verification1').click();">看不清换一张</a>
+                                </div>-->
+								
+								<div class="item item-fore4">
+									<div class="safe">
+										<span>
+                                                                             	</span>
+										<span class="forget-pw-safe">
+											<a href="/uc/links?tag=safe" class="" target="_blank" clstag="pageclick|keycount|201607144|3">忘记密码</a>
+										</span>
+                                 	</div>
+                                </div>
+								
+                                <div class="item item-fore5">
+                                    <div class="login-btn">
+                                    	<button class="btn-img btn-entry" id="loginsubmit" tabindex="6">登&nbsp;&nbsp;&nbsp;&nbsp;录</button>
+                                       <!--  <a href="javascript:;" ng-click="dlyz()" class="btn-img btn-entry" id="loginsubmit" tabindex="6" >登&nbsp;&nbsp;&nbsp;&nbsp;录</a> -->
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+<!--                <div class="qrcode-login" style="display: none; visibility: visible;">
+                    <div class="mc">
+                        <div class="qrcode-error-2016" style="left: 0px; display: none;">
+                            <div class="qrcode-error-mask">
+                            </div>
+                            <p class="err-cont">服务器出错</p>
+                            <a href="javascript:void(0)" class="refresh-btn">刷新</a>
+                        </div>
+                        <div class="qrcode-main">
+                            <div class="qrcode-img" style="left: 64px;">
+                                <img src="//qr.m.jd.com/show?appid=133&amp;size=147&amp;t=1508559939213" alt=""><div class="qrcode-error02 hide" id="J-qrcoderror">							<a href="#none">								<span class="error-icon"></span>								<div class="txt">网络开小差咯<span class="ml10">刷新二维码</span></div>							</a>						</div>
+                            </div>
+                            <div class="qrcode-help" style="display: none;"></div>
+                        </div>
+                        <div class="qrcode-panel">
+                            <ul>
+                                <li class="fore1">
+									<span>打开</span>
+                                    <a href="/uc/links?tag=apps" target="_blank" clstag="pageclick|keycount|201607144|9">
+									<span class="red">手机京东</span></a>
+                                </li>
+								<li>扫描二维码</li>
+                            </ul>
+                        </div>
+                        <div class="coagent qr-coagent" id="qrCoagent">
+                            <ul>
+                                <li><b></b><em>免输入</em></li>
+                                <li><b class="faster"></b><em>更快&nbsp;</em></li>
+                                <li><b class="more-safe"></b><em>更安全</em></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>-->
+				             <div class="coagent" id="kbCoagent">
+                    <ul>
+                        						                        <li>
+                            <b></b>
+                            <a href="javascript:void(0)"  clstag="pageclick|keycount|201607144|6" class="pdl"><b class="QQ-icon"></b><span>QQ</span></a>
+                                                        <span class="line">|</span>
+                                                    </li>
+                                                                        <li>
+                            <a href="javascript:void(0)"  clstag="pageclick|keycount|201607144|7" class="pdl"><b class="weixin-icon"></b><span>微信</span></a>
+								                        </li>
+                                                                                                <li class="extra-r">
+                            <div>
+                                <div class="regist-link"><a href="zhuce.html" clstag="pageclick|keycount|201607144|8" target="_blank"><b></b>立即注册</a></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>            </div>
+        </div>
+        <div class="login-banner" style="background-color: #e93854">		              <div class="w">			         <div id="banner-bg" clstag="pageclick|keycount|20150112ABD|46" class="i-inner" style="background: url(images/dl_bg.jpg) 0px 0px no-repeat;background-color: #e93854"></div>		              </div>		           </div>
+    </div>
+</div>
+<div class="w">
+    <div id="footer-2013">
+        <div class="links">
+            <a rel="nofollow" target="_blank" href="#">
+                关于我们
+            </a>
+            |
+            <a rel="nofollow" target="_blank" href="#">
+                联系我们
+            </a>
+            |
+            <a rel="nofollow" target="_blank" href="#">
+                人才招聘
+            </a>
+            |
+            <a rel="nofollow" target="_blank" href="javascript:void(0)">
+                商家入驻
+            </a>
+            |
+            <a rel="nofollow" target="_blank" href="#">
+                广告服务
+            </a>
+            |
+            <a rel="nofollow" target="_blank" href="#">
+                手机京东
+            </a>
+            |
+            <a target="_blank" href="#">
+                友情链接
+            </a>
+            |
+            <a target="_blank" href="#">
+                销售联盟
+            </a>
+            |
+            <a href="#" target="_blank">
+                京东社区
+            </a>
+            |
+            <a href="javascript:void(0)" target="_blank">
+                京东公益
+            </a>
+            |
+            <a target="_blank" href="javascript:void(0)" clstag="pageclick|keycount|20150112ABD|9">English Site</a>
+        </div>
+        <div class="copyright">
+            Copyright&nbsp;&#169;&nbsp;2004-2017&nbsp;&nbsp;京东JD.com&nbsp;版权所有
+        </div>
+    </div>
+</div>
+
+<!-- SDK 登录 -->
+</body></html>

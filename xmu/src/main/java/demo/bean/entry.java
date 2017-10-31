@@ -25,7 +25,7 @@ public class entry {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer entryId;
-	private String  orderNO;
+	private Integer  orderNO;
 	@ManyToOne
 	@JoinColumn(name="orderNO",insertable=false,updatable=false)
 	private Orders  orderbaen;
@@ -41,10 +41,10 @@ public class entry {
 	public void setEntryId(Integer entryId) {
 		this.entryId = entryId;
 	}
-	public String getOrderNO() {
+	public Integer getOrderNO() {
 		return orderNO;
 	}
-	public void setOrderNO(String orderNO) {
+	public void setOrderNO(Integer orderNO) {
 		this.orderNO = orderNO;
 	}
 	public Orders getOrderbaen() {

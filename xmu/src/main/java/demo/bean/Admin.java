@@ -7,14 +7,14 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="myAdmin")
+@Table(name="myadmin")
 public class Admin {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer adminId;
 	private String  adminName;
-	private String  amdpwd;
-	private Integer perssin;
+	private String  adminpwd;
+	private String  perssion;
 	public Integer getAdminId() {
 		return adminId;
 	}
@@ -27,23 +27,22 @@ public class Admin {
 	public void setAdminName(String adminName) {
 		this.adminName = adminName;
 	}
-	public String getAmdpwd() {
-		return amdpwd;
+	public String getAdminpwd() {
+		return adminpwd;
 	}
-	public void setAmdpwd(String amdpwd) {
-		this.amdpwd = amdpwd;
+	public void setAdminpwd(String adminpwd) {
+		this.adminpwd = adminpwd;
 	}
-	public Integer getPerssin() {
-		return perssin;
+	public String getPerssion() {
+		return perssion;
 	}
-	public void setPerssin(Integer perssin) {
-		this.perssin = perssin;
+	public void setPerssion(String perssion) {
+		this.perssion = perssion;
 	}
 	@Override
 	public String toString() {
-		return "Admin [adminId=" + adminId + ", adminName=" + adminName + ", amdpwd=" + amdpwd + ", perssin=" + perssin
-				+ "]";
+		return "Admin [adminId=" + adminId + ", adminName=" + adminName + ", adminpwd=" + adminpwd + ", perssion="
+				+ perssion + "]";
 	}
 	
-
 }
